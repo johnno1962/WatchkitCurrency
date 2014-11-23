@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Currency_Watch_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" backgroundImage="Metal-and-Iron-Background-59" contentMode="scaleAspectFill" hasDetent="YES" id="Zmh-Ka-6X2">
+                            <items>
+                                <group alignment="center" hasDetent="YES" id="anu-Cv-iiw">
+                                    <items>
+                                        <group alignment="left" layout="vertical" hasDetent="YES" id="GEN-100-GEN">
+                                            <items>
+                                                <group width="0.0" height="2" alignment="left" hasDetent="YES" id="GEN-101-GEN"/>
+                                                <imageView width="107" height="23.5" alignment="left" id="GEN-102-GEN"/>
+                                                <group width="0.0" height="2" alignment="left" hasDetent="YES" id="GEN-103-GEN"/>
+                                                <group alignment="left" hasDetent="YES" id="GEN-104-GEN">
+                                                    <items>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="seven" id="GEN-105-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="7" id="GEN-106-GEN">
+                                                                    <connections>
+                                                                        <action selector="seven:" destination="AgC-eL-Hgc" id="CJp-cH-BDb"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-107-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="eight" id="GEN-108-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="8" id="GEN-109-GEN">
+                                                                    <connections>
+                                                                        <action selector="eight:" destination="AgC-eL-Hgc" id="V7b-Za-NcD"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-110-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="nine" id="GEN-111-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="9" id="GEN-112-GEN">
+                                                                    <connections>
+                                                                        <action selector="nine:" destination="AgC-eL-Hgc" id="hUS-ZY-vOy"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="1" height="0.0" alignment="left" hasDetent="YES" id="GEN-113-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="pound" id="GEN-114-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="£" id="GEN-115-GEN">
+                                                                    <connections>
+                                                                        <action selector="pound:" destination="AgC-eL-Hgc" id="7ss-w1-ULQ"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <group width="0.0" height="1" alignment="left" hasDetent="YES" id="GEN-116-GEN"/>
+                                                <group alignment="left" hasDetent="YES" id="GEN-117-GEN">
+                                                    <items>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="four" id="GEN-118-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="4" id="GEN-119-GEN">
+                                                                    <connections>
+                                                                        <action selector="four:" destination="AgC-eL-Hgc" id="LHe-da-jM5"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-120-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="five" id="GEN-121-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="5" id="GEN-122-GEN">
+                                                                    <connections>
+                                                                        <action selector="five:" destination="AgC-eL-Hgc" id="Ifb-fb-aOJ"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-123-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="six" id="GEN-124-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="6" id="GEN-125-GEN">
+                                                                    <connections>
+                                                                        <action selector="six:" destination="AgC-eL-Hgc" id="Upi-71-V4n"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="1" height="0.0" alignment="left" hasDetent="YES" id="GEN-126-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="euro" id="GEN-127-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="€" id="GEN-128-GEN">
+                                                                    <connections>
+                                                                        <action selector="euro:" destination="AgC-eL-Hgc" id="MKm-mn-c2c"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <group width="0.0" height="1.5" alignment="left" hasDetent="YES" id="GEN-129-GEN"/>
+                                                <group alignment="left" hasDetent="YES" id="GEN-130-GEN">
+                                                    <items>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="one" id="GEN-131-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="1" id="GEN-132-GEN">
+                                                                    <connections>
+                                                                        <action selector="one:" destination="AgC-eL-Hgc" id="Lfy-qQ-qeW"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-133-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="two" id="GEN-134-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="2" id="GEN-135-GEN">
+                                                                    <connections>
+                                                                        <action selector="two:" destination="AgC-eL-Hgc" id="yhc-4x-abT"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-136-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="three" id="GEN-137-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="3" id="GEN-138-GEN">
+                                                                    <connections>
+                                                                        <action selector="three:" destination="AgC-eL-Hgc" id="S3Z-6c-PeO"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="1" height="0.0" alignment="left" hasDetent="YES" id="GEN-139-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="dollar" id="GEN-140-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="$" id="GEN-141-GEN">
+                                                                    <connections>
+                                                                        <action selector="dollar:" destination="AgC-eL-Hgc" id="CYa-aM-NkC"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <group width="0.0" height="1.5" alignment="left" hasDetent="YES" id="GEN-142-GEN"/>
+                                                <group alignment="left" hasDetent="YES" id="GEN-143-GEN">
+                                                    <items>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="zero" id="GEN-144-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="0" backgroundImage="zero" id="GEN-145-GEN">
+                                                                    <connections>
+                                                                        <action selector="zero:" destination="AgC-eL-Hgc" id="BaV-ma-eXU"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-146-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="point" id="GEN-147-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="." id="GEN-148-GEN">
+                                                                    <connections>
+                                                                        <action selector="point:" destination="AgC-eL-Hgc" id="pnl-i4-1OD"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="2" height="0.0" alignment="left" hasDetent="YES" id="GEN-149-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="clear" id="GEN-150-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="C" id="GEN-151-GEN">
+                                                                    <connections>
+                                                                        <action selector="clear:" destination="AgC-eL-Hgc" id="NIy-Oe-Wdc"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                        <group width="1" height="0.0" alignment="left" hasDetent="YES" id="GEN-152-GEN"/>
+                                                        <group width="23" height="23" alignment="left" backgroundImage="yen" id="GEN-153-GEN">
+                                                            <items>
+                                                                <button width="23" height="23" alignment="left" alpha="0.050000000000000003" title="¥" id="GEN-154-GEN">
+                                                                    <connections>
+                                                                        <action selector="yen:" destination="AgC-eL-Hgc" id="R7P-BP-4y7"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                                <group width="1" height="10" alignment="left" id="VBI-Ht-j78"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="clear" destination="GEN-150-GEN" id="yXc-4E-BFk"/>
+                        <outlet property="dollar" destination="GEN-140-GEN" id="eKs-B4-POz"/>
+                        <outlet property="eight" destination="GEN-108-GEN" id="mtk-hu-5T6"/>
+                        <outlet property="euro" destination="GEN-127-GEN" id="7wX-c8-ZMw"/>
+                        <outlet property="five" destination="GEN-121-GEN" id="zIr-2V-eCE"/>
+                        <outlet property="four" destination="GEN-118-GEN" id="y59-in-SLf"/>
+                        <outlet property="imageView" destination="GEN-102-GEN" id="CjI-7R-kMW"/>
+                        <outlet property="nine" destination="GEN-111-GEN" id="Lf9-EN-pEh"/>
+                        <outlet property="one" destination="GEN-131-GEN" id="VdX-49-7fU"/>
+                        <outlet property="point" destination="GEN-147-GEN" id="imb-yQ-bPJ"/>
+                        <outlet property="pound" destination="GEN-114-GEN" id="hSM-DK-PRh"/>
+                        <outlet property="seven" destination="GEN-105-GEN" id="r50-cf-OHX"/>
+                        <outlet property="six" destination="GEN-124-GEN" id="PTh-oJ-FUh"/>
+                        <outlet property="three" destination="GEN-137-GEN" id="Jdi-kA-L2z"/>
+                        <outlet property="two" destination="GEN-134-GEN" id="4Da-rJ-UL1"/>
+                        <outlet property="yen" destination="GEN-153-GEN" id="aD9-EH-u88"/>
+                        <outlet property="zero" destination="GEN-144-GEN" id="hod-WR-Zxe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="190"/>
+        </scene>
+    </scenes>
+</document>
