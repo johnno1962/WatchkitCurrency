@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-ji-dTi">
-                                <rect key="frame" x="59" y="121" width="207" height="267"/>
+                                <rect key="frame" x="96" y="144" width="308" height="352"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-Fu-dqE">
-                                        <rect key="frame" x="0.0" y="63" width="46" height="46"/>
+                                        <rect key="frame" x="32" y="87" width="50" height="50"/>
                                         <state key="normal" title="7" image="7">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -29,7 +29,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-CU-Wcq">
-                                        <rect key="frame" x="54" y="63" width="46" height="46"/>
+                                        <rect key="frame" x="97" y="87" width="50" height="50"/>
                                         <state key="normal" title="8" image="8">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-LW-oxM">
-                                        <rect key="frame" x="108" y="63" width="46" height="46"/>
+                                        <rect key="frame" x="162" y="87" width="50" height="50"/>
                                         <state key="normal" title="9" image="9">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSD-Dw-SFX">
-                                        <rect key="frame" x="160" y="63" width="46" height="46"/>
+                                        <rect key="frame" x="227" y="87" width="50" height="50"/>
                                         <state key="normal" title="£" image="pound">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-gN-dCB">
-                                        <rect key="frame" x="0.0" y="115" width="46" height="46"/>
+                                        <rect key="frame" x="32" y="151" width="50" height="50"/>
                                         <state key="normal" title="4" image="4">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vn-WV-sRL">
-                                        <rect key="frame" x="54" y="115" width="46" height="46"/>
+                                        <rect key="frame" x="97" y="151" width="50" height="50"/>
                                         <state key="normal" title="5" image="5">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjO-pj-bAZ">
-                                        <rect key="frame" x="108" y="115" width="46" height="46"/>
+                                        <rect key="frame" x="162" y="151" width="50" height="50"/>
                                         <state key="normal" title="6" image="6">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -83,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-nv-i71">
-                                        <rect key="frame" x="160" y="115" width="46" height="46"/>
+                                        <rect key="frame" x="227" y="151" width="50" height="50"/>
                                         <state key="normal" title="€" image="euro">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-XN-qLb">
-                                        <rect key="frame" x="0.0" y="168" width="46" height="46"/>
+                                        <rect key="frame" x="32" y="215" width="50" height="50"/>
                                         <state key="normal" title="1" image="1">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -101,7 +101,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGf-e2-5Jz">
-                                        <rect key="frame" x="54" y="168" width="46" height="46"/>
+                                        <rect key="frame" x="97" y="215" width="50" height="50"/>
                                         <state key="normal" title="2" image="2">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -110,7 +110,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYb-R4-LrO">
-                                        <rect key="frame" x="54" y="221" width="46" height="46"/>
+                                        <rect key="frame" x="97" y="279" width="50" height="50"/>
                                         <state key="normal" title="." image="point">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -119,7 +119,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-vY-O9O">
-                                        <rect key="frame" x="108" y="221" width="46" height="46"/>
+                                        <rect key="frame" x="162" y="279" width="50" height="50"/>
                                         <state key="normal" title="C" image="clear">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -128,7 +128,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-Yh-Gro">
-                                        <rect key="frame" x="160" y="221" width="46" height="46"/>
+                                        <rect key="frame" x="227" y="279" width="50" height="50"/>
                                         <state key="normal" title="¥" image="yen2">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -137,7 +137,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-uS-Vik">
-                                        <rect key="frame" x="108" y="168" width="46" height="46"/>
+                                        <rect key="frame" x="162" y="215" width="50" height="50"/>
                                         <state key="normal" title="3" image="3">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -146,7 +146,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNG-VT-njS">
-                                        <rect key="frame" x="160" y="168" width="46" height="46"/>
+                                        <rect key="frame" x="227" y="215" width="50" height="50"/>
                                         <state key="normal" title="$" image="dollar">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -155,7 +155,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5l-U3-T3i">
-                                        <rect key="frame" x="0.0" y="221" width="46" height="46"/>
+                                        <rect key="frame" x="32" y="279" width="50" height="50"/>
                                         <state key="normal" title="0" image="0">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -164,7 +164,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPe-V0-kB2">
-                                        <rect key="frame" x="0.0" y="8" width="207" height="47"/>
+                                        <rect key="frame" x="32" y="23" width="245" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.0023114694138171021" blue="0.0039311596847864116" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>

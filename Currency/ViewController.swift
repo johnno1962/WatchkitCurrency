@@ -20,7 +20,10 @@ class ViewController: UIViewController {
 
         // here is where the grouping is done
         var id: Int = 10
-        Group.group( self, frame:viewToGroup.bounds, subviews:viewToGroup.subviews, id:&id, cg: cg )
+        let iWatchAvailableArea38mm = CGRectMake(0.0, 0.0, 268.0, 302.0)
+        let iWatchAvailableArea42mm = CGRectMake(0.0, 0.0, 308.0, 352.0)
+        Group.group( self, frame:viewToGroup.bounds, containerFrame:iWatchAvailableArea42mm,
+            subviews:viewToGroup.subviews, id:&id, cg: cg )
 
         if true {
             let image = CGBitmapContextCreateImage(cg)

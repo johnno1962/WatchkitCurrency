@@ -58,7 +58,7 @@ class InterfaceController: WKInterfaceController {
         super.init(context: context)
         // Configure interface objects here.
         NSLog("%@ init", self)
-        rect = CGRectMake(0.0, 0.0, 107.0*2.0, 23.5*2.0)
+        rect = CGRectMake(0.0, 0.0, 245.0, 50.0)
         let bitsPerComponent = 8, bytesPerRow = bitsPerComponent/8*4 * Int(rect.size.width)
         cg = CGBitmapContextCreate(calloc( UInt(bytesPerRow * Int(rect.size.height)), UInt(1) ),
             UInt(rect.size.width), UInt(rect.size.height),

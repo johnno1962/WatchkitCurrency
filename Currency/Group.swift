@@ -10,12 +10,16 @@ import UIKit
 
 class Group {
 
-    class func group( target: UIViewController, frame: CGRect, subviews: [AnyObject],
+    class func group( target: UIViewController, frame: CGRect, containerFrame: CGRect, subviews: [AnyObject],
         inout id: Int, cg: CGContext! = nil, vertical: Bool = true, indent: String = "" ) {
 
         let layout = vertical ? "vertical" : "horizontal"
+        var height = frame.size.height/containerFrame.size.height
+        if height > 1.0 {
+            height = frame.size.height/2.0
+        }
 
-        println( indent+"<group alignment=\"left\" layout=\"\(layout)\" hasDetent=\"YES\" id=\"GEN-\(id++)-GEN\">" )
+        println( indent+"<group alignment=\"center\" layout=\"\(layout)\" width=\"\(frame.size.width/containerFrame.size.width)\" height=\"\(height)\" spacing=\"0.0\" hasDetent=\"YES\" id=\"GEN-\(id++)-GEN\">" )
         println( indent+"  <items>" )
 
         let views = subviews.sorted {
@@ -31,7 +35,8 @@ class Group {
             if space != 0 {
                 let flow = vertical ? "height" : "width"
                 let zero = !vertical ? "height" : "width"
-                println( indent+"    <group \(flow)=\"\(space/2.0-2.0)\" \(zero)=\"0.0\" alignment=\"left\" hasDetent=\"YES\" id=\"GEN-\(id++)-GEN\"><items/></group>" )
+                let basis = vertical ? frame.size.height : frame.size.width
+                println( indent+"    <group \(flow)=\"\(space/basis)\" \(zero)=\"0.0\" alignment=\"left\" hasDetent=\"YES\" id=\"GEN-\(id++)-GEN\"><items/></group>" )
                 place += space
             }
 
@@ -60,7 +65,7 @@ class Group {
                 let size = newGroup[0].frame.size;
 
                 if let image =  newGroup[0] as? UIImageView {
-                    println( indent+"    <imageView alignment=\"left\" width=\"\(size.width/2.0)\" height=\"\(size.height/2.0)\" id=\"GEN-\(id++)-GEN\"/>" )
+                    println( indent+"    <imageView alignment=\"left\" width=\"\(size.width/frame.size.width)\" height=\"\(size.height/frame.size.height)\" id=\"GEN-\(id++)-GEN\"/>" )
                 }
 
                 else if let button = newGroup[0] as? UIButton {
@@ -68,10 +73,10 @@ class Group {
                         if actions.count != 0 {
                             let action = actions[0] as NSString
                             let buttonImage = action.substringToIndex(action.length-1)
-                            println( indent+"    <group alignment=\"left\" width=\"\(size.width/2.0)\" height=\"\(size.height/2.0)\" backgroundImage=\"\(buttonImage)\" id=\"GEN-\(id++)-GEN\">")
+                            println( indent+"    <group alignment=\"left\" width=\"\(size.width/frame.size.width)\" height=\"\(size.height/frame.size.height)\" backgroundImage=\"\(buttonImage)\" id=\"GEN-\(id++)-GEN\">")
                             println( indent+"      <items>" )
-                            println( indent+"        <button alignment=\"left\" title=\"\(button.currentTitle!)\" width=\"\(size.width/2.0)\" height=\"\(size.height/2.0)\" alpha=\"0.05\" id=\"GEN-\(id++)-GEN\">" )
-                            //println( indent+"      <connections><action selector=\"\(action)\" destination=\"CONTROLLER\" id=\"GEN-\(id++)-GEN\"/></connections>" )
+                            println( indent+"        <button alignment=\"left\" title=\"\(button.currentTitle!)\" width=\"1.0\" height=\"1.0\" alpha=\"0.05\" id=\"GEN-\(id++)-GEN\">" )
+                            println( indent+"          <connections><action selector=\"\(action)\" destination=\"__TARGET__\" id=\"GEN-\(id++)-GEN\"/></connections>" )
                             println( indent+"        </button>" )
                             println( indent+"      </items>" )
                             println( indent+"    </group>" )
@@ -86,11 +91,13 @@ class Group {
             else {
                 if vertical {
                     newFrame.origin.x = frame.origin.x
+                    newFrame.size.width = frame.size.width
                 }
                 else {
                     newFrame.origin.y = frame.origin.y
+                    newFrame.size.height = frame.size.height
                 }
-                group( target, frame:newFrame, subviews:newGroup, id:&id,
+                group( target, frame:newFrame, containerFrame:frame, subviews:newGroup, id:&id,
                     cg: cg, vertical: !vertical, indent: indent+"    " )
             }
 
