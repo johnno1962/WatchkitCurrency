@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         var id: Int = 10
         let iWatchAvailableArea38mm = CGRectMake(0.0, 0.0, 268.0, 302.0)
         let iWatchAvailableArea42mm = CGRectMake(0.0, 0.0, 308.0, 352.0)
-        Group.group( self, frame:viewToGroup.bounds, containerFrame:iWatchAvailableArea42mm,
+        Group.group( self, frame:iWatchAvailableArea42mm,
             subviews:viewToGroup.subviews, id:&id, cg: cg )
 
         if true {

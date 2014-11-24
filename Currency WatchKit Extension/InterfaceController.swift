@@ -12,25 +12,12 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet var imageView: WKInterfaceImage!
+    @IBOutlet weak var imageView: WKInterfaceImage!
 
-    @IBOutlet var pound: WKInterfaceGroup!
-    @IBOutlet var euro: WKInterfaceGroup!
-    @IBOutlet var dollar: WKInterfaceGroup!
-    @IBOutlet var yen: WKInterfaceGroup!
-
-    @IBOutlet var one: WKInterfaceGroup!
-    @IBOutlet var two: WKInterfaceGroup!
-    @IBOutlet var three: WKInterfaceGroup!
-    @IBOutlet var four: WKInterfaceGroup!
-    @IBOutlet var five: WKInterfaceGroup!
-    @IBOutlet var six: WKInterfaceGroup!
-    @IBOutlet var seven: WKInterfaceGroup!
-    @IBOutlet var eight: WKInterfaceGroup!
-    @IBOutlet var nine: WKInterfaceGroup!
-    @IBOutlet var zero: WKInterfaceGroup!
-    @IBOutlet var point: WKInterfaceGroup!
-    @IBOutlet var clear: WKInterfaceGroup!
+    @IBOutlet weak var pound: WKInterfaceButton!
+    @IBOutlet weak var euro: WKInterfaceButton!
+    @IBOutlet weak var dollar: WKInterfaceButton!
+    @IBOutlet weak var yen: WKInterfaceButton!
 
     var lastCurrency: String!
     var converted = true
@@ -161,26 +148,12 @@ class InterfaceController: WKInterfaceController {
         swichToCurrency("yen")
     }
 
-    func toggleButton( group: String ) {
-        let buttonGrounp = valueForKey( group )! as WKInterfaceGroup
-        buttonGrounp.setBackgroundImageNamed(group+"_")
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(0.5 * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), {
-                buttonGrounp.setBackgroundImageNamed(group)
-        })
-    }
-
     func addChar( char: String, group: String ) {
         if converted {
             converted = false
             displayed = ""
         }
         displayed += char
-        toggleButton(group)
         setDisplayed(displayed)
     }
 
@@ -229,7 +202,6 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func clear(sender:AnyObject) {
-        toggleButton("clear")
         setDisplayed("")
     }
 
