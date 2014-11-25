@@ -5,19 +5,30 @@ Swift Currency Converter App for iWatch with generic scalable interface.
 ![Icon](http://injectionforxcode.johnholdsworth.com/convert4.gif) ![Icon](http://injectionforxcode.johnholdsworth.com/convert3.gif)
 
 The user interface components in the initial release of Watchkit are
-intentionally quite restricted due to the devices small size. There is
+intentionally quite restricted due to the device's small size. There is
 however enough flexibility using recursive WKInterfaceGroup elements to
 to lay out interfaces pretty much at will with a little ingenuity.
 Not something I'd recommend trying to do in your Watchkit App's 
 storyboard mind you. Better to lay out your interface exactly how
 you want in an iOS storyboard and generate the groups to insert
-into the storyboard programatically using the "Group.swift" class in this
-project. The resulting hierarcy of groups for this currency convertor
+into the Watchkit storyboard programatically using the "Group.swift"
+class in this project (See ViewController.swift in te main project.)
+
+```
+// here is where the grouping is done
+var id: Int = 10
+let iWatchAvailableArea38mm = CGRectMake(0.0, 0.0, 268.0, 302.0)
+let iWatchAvailableArea42mm = CGRectMake(0.0, 0.0, 308.0, 352.0)
+Group.group( self, frame:iWatchAvailableArea42mm,
+    subviews:viewToGroup.subviews, id:&id, cg: cg )
+```
+
+The resulting hierarcy of groups for this currency convertor 
 looks like this:
 
 ![Icon](http://injectionforxcode.johnholdsworth.com/frames2.png)
 
-And the storyboard xib snippet generated is the console. It uses
+..and the storyboard xib snippet generated on the console. It uses
 dimensions "Relative to the Container" so the interface scales 
 according to whether the watch has a 38mm (268x302 pixels drawable)
 or 42 mm display (308x352 pixels drawable).
@@ -59,20 +70,19 @@ or 42 mm display (308x352 pixels drawable).
 …
 ```
 
-This XML is then manually edited into the Watchkit 
-target's Interface.storyboard by right-clicking on it and selecting 
-"Open As/Source Code". You can then insert this text inside a group already 
-on the interface. The iPhone interface template is at 2 times iWatch scale.
-If present action connections for buttons are preserved but you will need to 
-replace the string __TARGET__ with the id of the InterfaceController in your
-storyboard.
+You then manually edit this XML into the Watchkit target's Interface.storyboard 
+by right-clicking on it and selecting  "Open As/Source Code". You can then 
+insert this text inside a group or InterfaceController already on the interface. 
+The iPhone interface template is at 2 times iWatch scale. If present action 
+connections for buttons are preserved but you will need to replace the string
+_ _ TARGET _ _ with the id of the InterfaceController in your storyboard.
 
 The text output display is implemented by generating dynamic UIImages using
-OpenGL in the Watch App extension running on the phone. These are then 
+OpenGL CoreText in the Watch App extension running on the phone. These are then 
 copied across to the watch and swapped onto the screen in a WKInterfaceImage.
 
 ### License
 
-This code is made available under an MIT Style License. The background 
-is from http://textures8.com/metal-and-iron-background-fifty-nine/
-licensed for personal use only.
+This code is made available under an MIT Style License. The backgrounds 
+are from http://textures8.com/metal-and-iron-background-fifty-nine/ and
+http://textures8.com/money-background-four/ licensed for personal use only.
