@@ -133,11 +133,40 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="0.0" height="0.071022727272727307" alignment="left" hasDetent="YES" id="GEN-70-GEN"/>
-                        <group width="1" height="0.53693181818181801" alignment="left" spacing="0.0" hasDetent="YES" id="GEN-71-GEN">
+                        <group width="0.0" height="0.107954545454545" alignment="left" hasDetent="YES" id="GEN-70-GEN"/>
+                        <group width="0.89935064935064901" height="0.59090909090909105" alignment="left" spacing="0.0" hasDetent="YES" id="GEN-71-GEN">
                             <items>
-                                <group width="0.103896103896104" height="0.0" alignment="left" hasDetent="YES" id="GEN-72-GEN"/>
-                                <imageView width="0.79545454545454497" height="1" alignment="left" image="Money-Background-4-625x500" contentMode="scaleAspectFill" id="GEN-73-GEN"/>
+                                <group width="0.12635379061371799" height="0.0" alignment="left" hasDetent="YES" id="GEN-72-GEN"/>
+                                <group width="0.87364620938628201" height="1" alignment="left" layout="vertical" spacing="0.0" hasDetent="YES" id="GEN-73-GEN">
+                                    <items>
+                                        <group width="0.0" height="0.038461538461538498" alignment="left" hasDetent="YES" id="GEN-74-GEN"/>
+                                        <group width="1" height="0.15384615384615399" alignment="left" spacing="0.0" hasDetent="YES" id="GEN-75-GEN">
+                                            <items>
+                                                <group width="0.033057851239669402" height="0.0" alignment="left" hasDetent="YES" id="GEN-76-GEN"/>
+                                                <label width="0.93388429752066104" height="1" alignment="left" text="Converter" id="GEN-77-GEN"/>
+                                            </items>
+                                        </group>
+                                        <group width="0.0" height="0.038461538461538498" alignment="left" hasDetent="YES" id="GEN-78-GEN"/>
+                                        <group width="1" height="0.73076923076923095" alignment="left" spacing="0.0" hasDetent="YES" id="GEN-79-GEN">
+                                            <items>
+                                                <group width="0.041322314049586799" height="0.0" alignment="left" hasDetent="YES" id="GEN-80-GEN"/>
+                                                <group width="0.42975206611570199" height="1" alignment="left" layout="vertical" spacing="0.0" hasDetent="YES" id="GEN-81-GEN">
+                                                    <items>
+                                                        <group width="0.0" height="0.072368421052631596" alignment="left" hasDetent="YES" id="GEN-82-GEN"/>
+                                                        <imageView width="1" height="0.88157894736842102" alignment="left" image="Money-Background-4-625x500" contentMode="scaleAspectFill" id="GEN-83-GEN"/>
+                                                    </items>
+                                                </group>
+                                                <group width="0.033057851239669402" height="0.0" alignment="left" hasDetent="YES" id="GEN-84-GEN"/>
+                                                <group width="0.46280991735537202" height="1" alignment="left" layout="vertical" spacing="0.0" hasDetent="YES" id="GEN-85-GEN">
+                                                    <items>
+                                                        <group width="0.0" height="0.072368421052631596" alignment="left" hasDetent="YES" id="GEN-86-GEN"/>
+                                                        <imageView width="1" height="0.88157894736842102" alignment="left" image="Money-Background-4-625x500" contentMode="scaleAspectFill" id="GEN-87-GEN"/>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -150,7 +179,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="305" y="190"/>
+            <point key="canvasLocation" x="305" y="189.66192609071732"/>
         </scene>
     </scenes>
 </document>

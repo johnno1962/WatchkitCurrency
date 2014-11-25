@@ -31,13 +31,14 @@ class Group {
                 place += space
             }
 
-            var newGroup = [views[v]]
-            var newFrame = views[v].frame
+            var firstView = views[v]
+            var newGroup = [firstView]
+            var newFrame = firstView.frame
 
             // consolidate views that overlap vertically/horizontally
             while v+1<views.count &&
                     (vertical ? views[v+1].frame.origin.y : views[v+1].frame.origin.x)
-                        <=
+                        <
                     (vertical ? CGRectGetMaxY( newFrame ) : CGRectGetMaxX( newFrame )) {
                 newFrame = CGRectUnion(newFrame, views[++v].frame)
                 newGroup.append( views[v] )
@@ -49,22 +50,29 @@ class Group {
                 CGContextSetStrokeColor(cg, black)
                 CGContextStrokeRect(cg, newFrame)
             }
-            
-            // are we down to an individual view
-            if newGroup.count == 1 && (vertical ? // and is it hard up against the frame boundary
+
+            let isSubview = firstView.dynamicType === UIView.self
+
+            // are we down to an individual view  and is it hard up against the frame boundary
+            if newGroup.count == 1 && !isSubview && (vertical ?
                     newFrame.origin.x == frame.origin.x : newFrame.origin.y == frame.origin.y) {
                 let size = newGroup[0].frame.size;
+                let stdAttrs = "alignment=\"left\" width=\"\(size.width/frame.size.width)\" height=\"\(size.height/frame.size.height)\" id=\"GEN-\(id++)-GEN\""
 
-                if let image =  newGroup[0] as? UIImageView {
-                    println( indent+"<imageView alignment=\"left\" width=\"\(size.width/frame.size.width)\" height=\"\(size.height/frame.size.height)\" id=\"GEN-\(id++)-GEN\"/>" )
+                if let image = firstView as? UIImageView {
+                    println( indent+"<imageView \(stdAttrs)/>" )
                 }
 
-                else if let button = newGroup[0] as? UIButton {
+                else if let label = firstView as? UILabel {
+                    println( indent+"<label text=\"\(label.text!)\" \(stdAttrs)/>" )
+                }
+
+                else if let button = firstView as? UIButton {
                     if let actions = button.actionsForTarget(target, forControlEvent: .TouchUpInside) {
                         if actions.count != 0 {
                             let action = actions[0] as NSString
                             let buttonImage = action.substringToIndex(action.length-1)
-                            println( indent+"<button alignment=\"left\" width=\"\(size.width/frame.size.width)\" height=\"\(size.height/frame.size.height)\" backgroundImage=\"\(buttonImage)\" id=\"GEN-\(id++)-GEN\">" )
+                            println( indent+"<button backgroundImage=\"\(buttonImage)\" \(stdAttrs)>" )
                             println( indent+"  <connections><action selector=\"\(action)\" destination=\"__TARGET__\" id=\"GEN-\(id++)-GEN\"/></connections>" )
                             println( indent+"</button>" )
                         }
@@ -72,20 +80,32 @@ class Group {
                 }
 
                 else {
-                    println( "Unsupported element: \(newGroup[0])" )
+                    println( "Unsupported element: \(firstView)" )
                 }
             }
+
             else {
-                if vertical {
-                    newFrame.origin.x = frame.origin.x
-                    newFrame.size.width = frame.size.width
+                if isSubview && newGroup.count == 1 {
+                    newFrame = vertical ?
+                        CGRectMake( -newFrame.origin.x, frame.origin.y,
+                            newFrame.size.width + newFrame.origin.x, newFrame.size.height) :
+                        CGRectMake( frame.origin.x, -newFrame.origin.y,
+                            newFrame.size.width, newFrame.origin.y + newFrame.size.height)
+                    newGroup = firstView.subviews.map { $0 as UIView }
                 }
                 else {
-                    newFrame.origin.y = frame.origin.y
-                    newFrame.size.height = frame.size.height
+                    if vertical {
+                        newFrame.origin.x = frame.origin.x
+                        newFrame.size.width = frame.size.width
+                    }
+                    else {
+                        newFrame.origin.y = frame.origin.y
+                        newFrame.size.height = frame.size.height
+                    }
                 }
-                let layout = !vertical ? "vertical" : "horizontal"
-                println( indent+"<group alignment=\"left\" layout=\"\(layout)\" width=\"\(newFrame.size.width/frame.size.width)\" height=\"\(newFrame.size.height/frame.size.height)\" spacing=\"0.0\" hasDetent=\"YES\" id=\"GEN-\(id++)-GEN\">" )
+
+                let nextLayout = vertical ? "horizontal" : "vertical"
+                println( indent+"<group spacing=\"0.0\" layout=\"\(nextLayout)\" hasDetent=\"YES\" alignment=\"left\" width=\"\(newFrame.size.width/frame.size.width)\" height=\"\(newFrame.size.height/frame.size.height)\" id=\"GEN-\(id++)-GEN\">" )
                 println( indent+"  <items>" )
                 group( target, frame:newFrame, subviews:newGroup, id:&id,
                     cg: cg, vertical: !vertical, indent: indent+"    " )
