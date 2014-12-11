@@ -40,9 +40,9 @@ class InterfaceController: WKInterfaceController {
         "yen": "¥"
     ]
 
-    override init(context: AnyObject?) {
+    init(context: AnyObject?) {
         // Initialize variables here.
-        super.init(context: context)
+        super.init()
         // Configure interface objects here.
         NSLog("%@ init", self)
         rect = CGRectMake(0.0, 0.0, 245.0, 50.0)
